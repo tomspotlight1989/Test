@@ -47,6 +47,9 @@ p{text-wrap:pretty}
 
 /* ---- header / nav ------------------------------------------------------ */
 .site-header{background:linear-gradient(180deg,var(--navy-deep) 0%,var(--navy) 52%,var(--navy-bright) 100%);color:#fff}
+/* Flat colour matching the hero gradient's own starting stop, so the two
+   meet at an identical pixel value instead of two gradients butting together. */
+.header-band{background:var(--navy-deep);color:#fff}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:26px var(--gutter);position:relative;z-index:30}
 
 .logo{text-decoration:none;color:#fff;font-variation-settings:'wdth' 62,'wght' 600;font-size:30px;line-height:1;letter-spacing:.012em}
