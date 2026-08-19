@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spotlight Media — Header (component)</title>
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap">
+<link rel="stylesheet" href="global.css">
+</head>
+<body>
+<!--
+  GLOBAL COMPONENT — Header
+  Reused, unchanged, on every page. In Webflow: build this once as a
+  Component (Symbol) and drop it at the top of each page's body.
+  Resize the window below ~900px to see the burger menu; the "Our
+  Services" item is a checkbox/label pair so it opens on tap with no JS.
+-->
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="logo">SPOTLIGHT<span class="logo__dot">.</span></a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+
+    <ul class="nav-menu">
+      <li class="nav-dropdown">
+        <input type="checkbox" id="services-dd" class="dropdown-toggle-input">
+        <label for="services-dd" class="nav-link dropdown-toggle-label">Our Services</label>
+        <div class="dropdown-list">
+          <div class="dropdown-panel">
+            <a class="dropdown-link" href="hands-on-seo-tune-up.html">Hands On SEO Tune-Up</a>
+            <a class="dropdown-link" href="key-page-content-optimisation.html">Key Page Content Optimisation</a>
+            <a class="dropdown-link" href="#">Technical &amp; Reporting Retainer</a>
+            <a class="dropdown-link" href="#">Regular Content Delivery</a>
+          </div>
+        </div>
+      </li>
+      <li><a class="nav-link" href="portfolio.html">Our Portfolio</a></li>
+      <li><a class="nav-link" href="process.html">Our Process</a></li>
+      <li><a class="btn btn--mint" href="https://www.spotlightmedia.io/contact-us">Get in touch</a></li>
+    </ul>
+  </nav>
+</header>
+</body>
+</html>
