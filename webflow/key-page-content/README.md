@@ -1,39 +1,36 @@
 # Spotlight Media — Key Page Content Optimisation page build
 
 Rebuild of the design handoff's `design_handoff_key-page-content` bundle
-(from `Key_Page.zip`). Reuses most of the Header component and
-`../homepage/global.css` tokens already built, but with two deliberate
-exceptions — see below.
+(from `Key_Page.zip`). Reuses the Header and Footer components and
+`../homepage/global.css` tokens already built, with one deliberate
+exception — see below.
 
 ## Files
 
 | File | What it is |
 |---|---|
-| `key-page-content-body.html` | Page content, **including its own footer** (see "Light CTA" below) — this is what goes in the Embed |
-| `index.html` | Full page: header + body (with its own footer) stitched together, for browser preview |
+| `key-page-content-body.html` | Page content only (hero → future), no header/footer — this is what goes in the Embed |
+| `index.html` | Full page: header + body + standard shared footer stitched together, for browser preview |
 
 New CSS was appended to `../homepage/global.css` — see the "Key Page Content
 Optimisation page" section near the bottom of that file.
 
-## Two deliberate exceptions to the shared components
+## Note: light CTA from the handoff was not built
 
-1. **Light CTA — this page does NOT use the shared Footer component.**
-   Every other page's CTA band is dark navy. This page's section immediately
-   above the CTA is already dark ("We set your team up for the future"), so
-   the handoff specifies a **light** CTA band here instead — otherwise the
-   two dark sections would visually merge into one. Rather than adding a
-   light/dark toggle to the shared Footer component for a variant only one
-   page uses, this page carries its own CTA + legal bar markup at the end of
-   `key-page-content-body.html`. **Don't drop the shared Footer
-   Embed/Component on this page** — this page's body Embed already includes
-   it, with the light variant (`.cta-band--light`, `.cta-band__heading--on-light`,
-   `.cta-band__content`, `.cta-band__body`) and different button copy
-   ("Request pricing →" vs "Get in touch →").
-2. **Header's "Our Services" nav item is active on this page** (mint text +
-   mint underline, via the new `.nav-link--active` class) — matches the
-   handoff exactly. This is a one-line difference from the standard header
-   snippet (add `nav-link--active` alongside `nav-link` on that one item);
-   the Tune-Up page will need the same treatment.
+The original handoff specifies a **light** CTA band for this page (rather
+than the standard dark navy one), since the section directly above it is
+already dark. That was built initially, but by request this page now uses
+the **standard shared Footer component** instead, matching every other
+page — no light-CTA variant, no page-specific footer. The `.cta-band--light`
+etc. classes were removed from `global.css` since nothing uses them now.
+
+## One deliberate exception to the shared components
+
+**Header's "Our Services" nav item is active on this page** (mint text +
+mint underline, via the new `.nav-link--active` class) — matches the
+handoff exactly. This is a one-line difference from the standard header
+snippet (add `nav-link--active` alongside `nav-link` on that one item);
+the Tune-Up page will need the same treatment.
 
 ## What's new
 
