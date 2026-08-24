@@ -66,7 +66,7 @@ p{text-wrap:pretty}
 .nav-dropdown{position:relative;display:flex;align-items:center}
 /* Hidden checkbox drives the mobile tap-to-open state; hover/focus-within drive desktop. */
 .dropdown-toggle-input{position:absolute;opacity:0;pointer-events:none}
-.dropdown-toggle-label{cursor:pointer}
+.dropdown-toggle-label{cursor:pointer;margin:0}
 .dropdown-list{position:absolute;top:100%;left:-20px;padding-top:20px;min-width:300px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .16s,transform .16s,visibility .16s}
 .nav-dropdown:hover .dropdown-list,
 .nav-dropdown:focus-within .dropdown-list,
