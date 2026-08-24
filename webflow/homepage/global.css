@@ -177,8 +177,8 @@ p{text-wrap:pretty}
   .nav-menu li{padding:16px 40px;border-top:1px solid rgba(255,255,255,.14)}
   .nav-menu li:first-child{border-top:none}
   .nav-dropdown{flex-direction:column;align-items:flex-start;width:100%}
-  .dropdown-list{position:static;padding-top:12px;min-width:0;opacity:1;visibility:visible;transform:none;max-height:0;overflow:hidden;transition:max-height .18s ease;width:100%}
-  .dropdown-toggle-input:checked ~ .dropdown-list{max-height:260px}
+  .dropdown-list{position:static;padding-top:0;min-width:0;opacity:1;visibility:visible;transform:none;max-height:0;overflow:hidden;transition:max-height .18s ease,padding-top .18s ease;width:100%}
+  .dropdown-toggle-input:checked ~ .dropdown-list{max-height:260px;padding-top:12px}
   .dropdown-panel{border:none;box-shadow:none}
   .dropdown-link{padding:12px 0;border-top:1px solid rgba(20,18,46,.08)}
   .nav-menu .btn{width:100%;padding:14px 20px}
