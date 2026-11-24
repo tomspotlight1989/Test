@@ -1,0 +1,31 @@
+name: Google core update watch
+
+on:
+  schedule:
+    - cron: "17 * * * *" # hourly
+  workflow_dispatch: {}
+
+permissions:
+  issues: write
+  contents: read
+
+concurrency:
+  group: core-update-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ensure label exists
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh label create core-update --color D93F0B --description "Google Search core update" --force
+      - name: Check feed
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          ASSIGNEE: ${{ github.repository_owner }}
+        run: python3 scripts/core_update_watch.py
